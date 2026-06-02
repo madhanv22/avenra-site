@@ -81,24 +81,23 @@ export const processSteps = [
 
 export const teamMembers = [
   {
-    name: 'Alex Morgan',
+    name: 'Aravindh S',
     role: 'Founder & CEO',
-    bio: 'Leads product vision and client strategy. 10+ years building software for complex business operations.',
+    bio: 'Founder & CEO at Avenra, building software products and technology solutions. Experienced in backend engineering, full-stack development, system design, cloud technologies, and scalable application architecture. Driven by curiosity, engineering excellence, and the goal of creating meaningful technology that solves real-world problems.',
+    image: '/src/assets/aravinth.jpg',
+    linkedin: 'https://www.linkedin.com/in/aravindh99/',
   },
   {
-    name: 'Jordan Lee',
+    name: 'Madhankumar V',
     role: 'Co-Founder & CTO',
-    bio: 'Drives technical architecture and engineering standards. Expert in scalable cloud systems.',
+    bio: 'Co-Founder at Avenra, building digital products and modern technology solutions. Experienced in frontend development, web applications, UI/UX, and scalable software solutions. Focused on product development, user experience, and reliable digital platforms. Driven by technology, innovation, and building impactful software products.',
+    image: '/src/assets/madhankumar.png',
+    linkedin: 'https://www.linkedin.com/in/madhankumarv24/',
   },
   {
-    name: 'Sam Rivera',
-    role: 'Co-Founder & COO',
-    bio: 'Oversees delivery, operations, and client success. Ensures every project ships on time.',
-  },
-  {
-    name: 'Taylor Kim',
-    role: 'Co-Founder & CPO',
-    bio: 'Shapes product design and user experience. Bridges business goals with intuitive interfaces.',
+    name: 'Sujith Kumar Thankaraj',
+    role: 'Co-Founder',
+    bio: '',
   },
 ]
 

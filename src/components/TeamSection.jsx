@@ -4,6 +4,14 @@ import SectionHeading from './SectionHeading'
 
 const CARD_W = 304 // w-72 (288) + mx-3 (24) = ~304
 
+function LinkedInIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14Zm-.5 16.5v-6.2c0-1.9-1-3.3-2.9-3.3-1.1 0-1.9.6-2.2 1.2h-.1V10h-3v9.5h3v-5.2c0-1.4.3-2.7 2-2.7s1.7 1.6 1.7 2.8v5.1h3ZM6.9 8.3c1 0 1.7-.7 1.7-1.6 0-.9-.7-1.6-1.7-1.6S5.2 5.8 5.2 6.7c0 .9.7 1.6 1.7 1.6ZM5.4 19.5h3V10h-3v9.5Z" />
+    </svg>
+  )
+}
+
 function TeamSection() {
   const trackRef = useRef(null)
   const [paused, setPaused] = useState(false)
@@ -55,11 +63,20 @@ function TeamSection() {
             >
               {/* Photo placeholder */}
               <div className="flex h-52 items-center justify-center bg-gradient-to-br from-[#fff3e0] to-[#ffe0b2]">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-[0_4px_16px_rgba(245,130,11,0.18)]">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#f5820b" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="h-10 w-10">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                    <circle cx="12" cy="7" r="4"/>
-                  </svg>
+                <div className="flex h-28 w-28 items-center justify-center rounded-full bg-white shadow-[0_4px_16px_rgba(245,130,11,0.18)]">
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="h-28 w-28 rounded-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#f5820b" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="h-10 w-10">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                      <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                  )}
                 </div>
               </div>
 
@@ -68,7 +85,20 @@ function TeamSection() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-[#f5820b]">
                   {member.role}
                 </p>
-                <h3 className="mt-1.5 text-base font-bold text-[#17130e]">{member.name}</h3>
+                <div className="mt-1.5 flex items-start justify-between gap-3">
+                  <h3 className="text-base font-bold text-[#17130e]">{member.name}</h3>
+                  {member.linkedin ? (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${member.name} LinkedIn`}
+                      className="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#eee3d7] text-[#0A66C2] transition hover:border-[#0A66C2]/30 hover:bg-[#0A66C2]/5"
+                    >
+                      <LinkedInIcon className="h-4 w-4" />
+                    </a>
+                  ) : null}
+                </div>
                 <p className="mt-2 text-sm leading-6 text-[#675f55]">{member.bio}</p>
               </div>
             </div>
