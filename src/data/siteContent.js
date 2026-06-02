@@ -3,8 +3,8 @@ export const navItems = [
   { label: 'Services', path: '/services' },
   { label: 'About', path: '/about' },
   { label: 'Process', path: '/process' },
-  { label: 'Portfolio', path: '/portfolio' },
-  { label: 'Team', path: '/team' },
+  { label: 'Our Work', path: '/portfolio' },
+  { label: 'Our Team', path: '/team' },
   { label: 'Contact', path: '/contact' },
 ]
 

@@ -1,3 +1,4 @@
+import WhatsAppButton from '../components/WhatsAppButton'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
@@ -9,6 +10,7 @@ function MainLayout({ children, currentPath, onNavigate }) {
       <Sidebar currentPath={currentPath} onNavigate={onNavigate} />
       <main className="flex-1">{children}</main>
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }
