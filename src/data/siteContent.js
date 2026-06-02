@@ -1,3 +1,6 @@
+import aravinthImg from '../assets/aravinth.jpg'
+import madhankumarImg from '../assets/madhankumar.png'
+
 export const navItems = [
   { label: 'Home', path: '/' },
   { label: 'Services', path: '/services' },
@@ -84,14 +87,14 @@ export const teamMembers = [
     name: 'Aravindh S',
     role: 'Founder & CEO',
     bio: 'Founder & CEO at Avenra, building software products and technology solutions. Experienced in backend engineering, full-stack development, system design, cloud technologies, and scalable application architecture. Driven by curiosity, engineering excellence, and the goal of creating meaningful technology that solves real-world problems.',
-    image: '/src/assets/aravinth.jpg',
+    image: aravinthImg,
     linkedin: 'https://www.linkedin.com/in/aravindh99/',
   },
   {
     name: 'Madhankumar V',
     role: 'Co-Founder & CTO',
     bio: 'Co-Founder at Avenra, building digital products and modern technology solutions. Experienced in frontend development, web applications, UI/UX, and scalable software solutions. Focused on product development, user experience, and reliable digital platforms. Driven by technology, innovation, and building impactful software products.',
-    image: '/src/assets/madhankumar.png',
+    image: madhankumarImg,
     linkedin: 'https://www.linkedin.com/in/madhankumarv24/',
   },
   {
