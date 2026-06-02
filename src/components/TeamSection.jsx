@@ -54,12 +54,12 @@ function TeamSection() {
           ref={trackRef}
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
-          className="flex gap-0 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex gap-0 overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:flex-wrap lg:justify-between lg:overflow-visible"
         >
           {teamMembers.map((member, i) => (
             <div
               key={member.name}
-              className={`card-hover mx-3 flex w-72 shrink-0 flex-col overflow-hidden rounded-2xl border border-[#eee3d7] bg-white shadow-[0_4px_20px_rgba(31,27,21,0.06)] animate-fade-up animate-fade-up-delay-${Math.min(i + 1, 4)}`}
+              className={`card-hover mx-3 flex w-72 shrink-0 flex-col overflow-hidden rounded-2xl border border-[#eee3d7] bg-white shadow-[0_4px_20px_rgba(31,27,21,0.06)] animate-fade-up animate-fade-up-delay-${Math.min(i + 1, 4)} lg:mx-0 lg:mb-6 lg:w-[calc((100%-48px)/3)] lg:shrink`}
             >
               {/* Photo placeholder */}
               <div className="flex h-52 items-center justify-center bg-gradient-to-br from-[#fff3e0] to-[#ffe0b2]">

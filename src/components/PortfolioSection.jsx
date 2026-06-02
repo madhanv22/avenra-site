@@ -38,7 +38,7 @@ function PortfolioSection() {
       <div className="mx-auto w-full max-w-7xl">
         {/* Header row with arrows */}
         <div className="mb-10 flex items-end justify-between gap-4 animate-fade-up">
-          <SectionHeading eyebrow="Portfolio" title="Work we're proud of." />
+          <SectionHeading eyebrow="Our Work" title="Work we're proud of." />
           <div className="flex shrink-0 items-center gap-2">
             <button
               onClick={() => scroll(-1)}
@@ -64,12 +64,12 @@ function PortfolioSection() {
         {/* Scrollable track */}
         <div
           ref={trackRef}
-          className="flex overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="flex overflow-x-auto scroll-smooth pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:flex-wrap lg:justify-between lg:overflow-visible"
         >
           {portfolioProjects.map((project, i) => (
             <article
               key={project.title}
-              className={`card-hover mx-3 flex w-80 shrink-0 flex-col overflow-hidden rounded-2xl border border-[#eee3d7] bg-white shadow-[0_4px_20px_rgba(31,27,21,0.06)] animate-fade-up animate-fade-up-delay-${Math.min(i + 1, 3)}`}
+              className={`card-hover mx-3 flex w-80 shrink-0 flex-col overflow-hidden rounded-2xl border border-[#eee3d7] bg-white shadow-[0_4px_20px_rgba(31,27,21,0.06)] animate-fade-up animate-fade-up-delay-${Math.min(i + 1, 3)} lg:mx-0 lg:mb-6 lg:w-[calc((100%-48px)/3)] lg:shrink`}
             >
               {/* Card header */}
               <div className="flex h-40 items-center justify-center bg-gradient-to-br from-[#fff3e0] to-[#fce8cc]">
